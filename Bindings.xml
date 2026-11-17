@@ -1,0 +1,5 @@
+<Bindings>
+	<Binding name="NUGSPORTALS_TOGGLE">
+		nugsPortalsToggle()
+	</Binding>
+</Bindings>

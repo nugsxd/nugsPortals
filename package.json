@@ -1,0 +1,11 @@
+{
+  "name": "nugsportals",
+  "private": true,
+  "description": "Static checks for the nugsPortals addon. Not shipped to players.",
+  "scripts": {
+    "test": "node .tools/run.js"
+  },
+  "dependencies": {
+    "luaparse": "^0.3.1"
+  }
+}

@@ -1,0 +1,37 @@
+## Interface: 120105
+## Title: nugsPortals
+## Category: nugsAddons
+## Notes: Every dungeon and raid teleport in one list, named for the place it takes you to rather than the portal's lore name.|nThis season first, then dungeons and raids by expansion. Click one to teleport.|nCreated by nugs.
+## Author: nugs
+## Version: 0.3.0
+## IconTexture: Interface\AddOns\nugsPortals\icon
+
+# NOTE: if the addon list shows a blank icon, this BLP is not loading on your
+# client. Swap the line above back to a stock game texture and nothing else breaks:
+# ## IconTexture: Interface\Icons\Spell_Arcane_TeleportDalaran
+## SavedVariables: nugsPortalsDB
+## X-Author: nugs
+## X-Copyright: Copyright (c) 2026 nugs. All Rights Reserved.
+## X-License: All Rights Reserved
+## X-Category: Dungeons
+## X-Curse-Project-ID: 1813109
+
+# NOTE: retail only for now, unlike the rest of the suite. Whether WoW Forever has
+# Hero's Path portals at all is unverified - add 16001 above once a dump from that
+# client shows it does, rather than shipping an empty list there.
+
+# NOTE: bump the Interface number above to match your current retail patch if the
+# game flags this addon as "out of date". Find it with:  /run print((select(4,GetBuildInfo())))
+
+nugsMove.lua
+Core.lua
+Data.lua
+Window.lua
+Attach.lua
+Minimap.lua
+
+# NOTE: Bindings.xml is deliberately NOT listed here. The client loads it by name on
+# its own, and listing it as well makes it parse TWICE - the second time as a generic
+# UI XML file, where <Binding> is not a known element, which logs
+#     Unrecognized XML: Binding
+# on every load while the keybinding works perfectly.
